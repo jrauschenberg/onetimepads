@@ -1,0 +1,29 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-6">
+      <div class="panel">
+        <div class="panel-body">
+          <h3>Text You'd Like to Encode or Decode</h3>
+          <p>Type either the encoded message you've received or the uncoded message you'd like to encode here.</p>
+          <input type="text" class="form-control" placeholder="Enter message here" ng-model="message" id="message" rows="3"></textarea>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <div class="panel">
+        <div class="panel-body">
+          <h3>Key From Your One-Time Pad</h3>
+          <p>Type the key you'll find on your one-time pad below.</p>
+          <input type="text" class="form-control" placeholder="Enter key here" ng-model="key" id="key" rows="3"></textarea>
+        </div>
+      </div>
+    </div>
+  </div>
+  <p align="center">
+  <a class="btn btn-primary" ng-click="encodeDecode(message, key, 'code')" role="button">Encode</a>
+  <a class="btn btn-primary" ng-click="encodeDecode(message, key, 'decode')" role="button">Decode</a>
+  <h3 align="center">Your Encoded or Decoded Message Is:</h3>
+  <h4 align="center">{{translation}}</h4>
+
+</div>
+<datalist id="json-datalist"></datalist>
