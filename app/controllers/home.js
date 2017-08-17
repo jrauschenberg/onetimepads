@@ -7,7 +7,7 @@ angular.module('MyApp')
       if (method === 'code') {
         for (var i=0; i<message.length; i++) {
           if (message[i] === ' ') resultString += ' ';
-          resultString += String.fromCharCode(((message.charCodeAt(i) - 97) + (key.charCodeAt(i) - 97)) % 26 + 97);
+          else resultString += String.fromCharCode(((message.charCodeAt(i) - 97) + (key.charCodeAt(i) - 97)) % 26 + 97);
 
         }
       }
